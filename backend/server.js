@@ -11,9 +11,9 @@ const app = express();
 // ✅ Middleware
 app.use(
   cors({
-    origin: "https://smart-ecru-one.vercel.app/", // Change this for production
-    credentials: true, // ✅ Allow cookies to be sent from frontend
-  })
+  origin: "http://localhost:3000",  // Must be your frontend origin
+  credentials: true
+})
 );
 app.use(express.json());
 app.use(cookieParser());
